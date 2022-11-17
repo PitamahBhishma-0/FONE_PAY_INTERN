@@ -1,0 +1,145 @@
+<!--<form (ngSubmit)="doSubmit()">
+  <h2>SIGN UP FORM </h2>
+<div>
+  <label>FullName :</label>
+  <input name="name" [(ngModel)]="info.name" type="text" id="name" placeholder="fullName">
+  <br>
+  <label>Email :</label>
+  <input name="email" [(ngModel)]="info.email" type="email" id="email" placeholder="enter email">
+  <br>
+  <label>Password :</label>
+  <input name="password" [(ngModel)]="info.password" type="password" id="password" placeholder="enter your password">
+  <br>
+  <label>PhoneNumber :</label>
+  <input name="phone" type="number" id="number" placeholder="enter your number" [(ngModel)]="info.phoneNumber" >
+  <br>
+  <label>DateOfBirth :</label>
+  <input name="dob" [(ngModel)]="info.dob" type="date" id="date" placeholder="enter your date of birth">
+  <br>
+  <div>
+    <span>
+      Already registered ? <a href="/login">Login</a>
+    </span>
+  </div>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</div>
+</form>-->
+<h1 >SIGN UP FORM </h1>
+
+
+<mat-stepper [linear]="isLinear" #stepper>
+      <mat-step >
+        <form [formGroup]="infoForm">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Last name, First name" formControlName="name"
+                    type="text" class="form-control" id="name"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step >
+        <form [formGroup]="infoForm">
+          <ng-template matStepLabel>Fill out your email address</ng-template>
+          <mat-form-field appearance="fill">
+            <div class="mb-3">
+              <mat-label for="email" class="form-label">Email address :</mat-label>
+              <input matInput  formControlName="email" type="email"
+                      class="form-control" id="email" aria-describedby="emailHelp">
+              <mat-error>Please enter email</mat-error>
+
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+          </mat-form-field >
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step  >
+        <form [formGroup]="infoForm">
+          <ng-template matStepLabel>Fill out your password</ng-template>
+       <mat-form-field>
+          <div class="mb-3">
+        <mat-label for="password" class="form-label">Password :</mat-label>
+        <input matInput  formControlName="password" type="password"
+               class="form-control" id="password">
+            <mat-error>Please enter password</mat-error>
+      </div>
+       </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step  >
+        <form [formGroup]="infoForm">
+          <ng-template matStepLabel>Fill out your number</ng-template>
+          <mat-form-field>
+            <div class="mb-3">
+              <mat-label for="password" class="form-label">Number :</mat-label>
+              <input matInput  formControlName="phoneNumber"
+                      type="number" class="form-control" id="number">
+              <mat-error>Not Valid Number </mat-error>
+            </div>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <form [formGroup]="infoForm">
+          <ng-template matStepLabel>date of birth</ng-template>
+          <mat-form-field>
+            <div class="mb-3">
+              <mat-label for="dob" class="form-label">Date Of Birth :</mat-label>
+              <input matInput name="date"formControlName="dob" placeholder="EX. 00/00/0000"  type="date" class="form-control" id="dob">
+            </div>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+  <mat-step>
+    <form [formGroup]="infoForm">
+      <ng-template matStepLabel>Add expertise :</ng-template>
+      <mat-form-field>
+        <div formArrayName="experties">
+        <div class="mb-3">
+          <mat-label for="expertise" class="form-label">Expertise :</mat-label>
+          <ng-container *ngFor="let experties of $any(infoForm.get('experties')).controls;index as i">
+          <input matInput name="experties" formControlName="{{i}}"  type="text" class="form-control" id="experties">
+          </ng-container>
+        </div>
+        </div>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button (click)="doSubmit()" mat-button type="submit">Submit</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+
+</mat-stepper>
+<div class="container">
+    <span>
+     <h1>Already registered ?</h1>  <a routerLink="/login" class="btn btn-outline-primary">Login</a>
+    </span>
+</div>
+
+

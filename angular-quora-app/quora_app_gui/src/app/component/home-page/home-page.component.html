@@ -1,0 +1,24 @@
+<mat-toolbar>
+
+  <button   routerLink="/" mat-raised-button color="primary">Quora App</button>
+  <span class="example-spacer"></span>
+  <button *ngIf="!logged" routerLink="/signup"  type="submit" mat-raised-button color="primary">
+    SignUp
+  </button>
+  <button *ngIf="!logged" routerLink="/login" type="submit" mat-raised-button color="primary">
+    Login
+  </button>
+  <button  *ngIf="logged" routerLink="/dashboard" type="submit" mat-raised-button color="primary">
+    DashBoard
+  </button>
+</mat-toolbar>
+<br>
+<div class="container">
+<h1 *ngIf="!logged">WELCOME !! LOG IN OR SIGN UP TO CONTINUE </h1>
+  <h1 *ngIf="logged">Yay !! you are successfully logged in </h1>
+  <div class="chart-container">
+    <canvas  id="MyChart" >{{ charts }}</canvas>
+  </div>
+</div>
+
+

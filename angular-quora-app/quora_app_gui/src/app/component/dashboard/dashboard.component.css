@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.logout{
+  display: flex;
+  justify-content: space-between;
+}
+.button-container button{
+  margin: 1rem;
+}
+.button{
+  line-height: 12px;
+  width: 18px;
+  font-size: 8pt;
+  font-family: tahoma;
+  margin-top:50px;
+  margin-right: 112px;
+  position:absolute;
+  top:0;
+  right:0;
+}

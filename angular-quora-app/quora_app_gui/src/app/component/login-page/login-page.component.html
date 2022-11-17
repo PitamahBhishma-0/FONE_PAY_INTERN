@@ -1,0 +1,24 @@
+<button  routerLink="/" mat-raised-button color="primary">Quora App</button>
+
+<div class="container">
+<form  (ngSubmit)="doSubmit()">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address :</label>
+    <input name="email" [(ngModel)]="info.email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password :</label>
+    <input name="password" [(ngModel)]="info.password" type="password" class="form-control" id="password">
+  </div>
+  <div>
+    <span>
+      <h1>New user ?</h1> <a routerLink="/signup" class="btn btn-outline-primary">Register</a>
+    </span>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-outline-primary">Submit</button>
+  <button type="reset" class="btn btn-outline-danger">Reset</button>
+</form>
+{{info|json}}
+</div>

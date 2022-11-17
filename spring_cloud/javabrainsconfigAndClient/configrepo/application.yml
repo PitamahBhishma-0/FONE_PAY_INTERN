@@ -1,0 +1,11 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+db:
+  connection: another another update connection string from config server
+  port: 1200
+  host: 126.01.01
+my:
+  greetings: Hello world from config server

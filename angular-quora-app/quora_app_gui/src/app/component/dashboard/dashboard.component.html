@@ -1,0 +1,22 @@
+<button  routerLink="/" mat-raised-button color="primary">Quora App</button>
+
+<div class="container">
+
+  <div class="logout">
+    <div class="button-container">
+      <button routerLink="getUsers" class="btn btn-primary">GetAllUser</button>
+
+      <div class="button">
+        <a (click)="logoutUser()" class="btn btn-danger">Logout</a>
+      </div>
+
+
+</div>
+
+</div>
+  <h2 style="text-align: center"><strong>See our expertise in this group</strong></h2>
+
+  <div class="chart-container">
+    <canvas  id="MyChart" >{{ charts }}</canvas>
+  </div>
+</div>

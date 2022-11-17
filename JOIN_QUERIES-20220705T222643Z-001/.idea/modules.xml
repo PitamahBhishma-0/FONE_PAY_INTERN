@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JOIN_QUERIES/JOIN_QUERIES.iml" filepath="$PROJECT_DIR$/JOIN_QUERIES/JOIN_QUERIES.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JOIN_QUERIES-20220705T222643Z-001.iml" filepath="$PROJECT_DIR$/.idea/JOIN_QUERIES-20220705T222643Z-001.iml" />
+    </modules>
+  </component>
+</project>

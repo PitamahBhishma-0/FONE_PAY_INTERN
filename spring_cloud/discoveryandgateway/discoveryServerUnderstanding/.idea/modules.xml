@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/discoveryServer/discoveryServer.iml" filepath="$PROJECT_DIR$/discoveryServer/discoveryServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/discoveryServerUnderstanding.iml" filepath="$PROJECT_DIR$/.idea/discoveryServerUnderstanding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movieCatalogService/movieCatalogService.iml" filepath="$PROJECT_DIR$/movieCatalogService/movieCatalogService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movieInfoService/movieInfoService.iml" filepath="$PROJECT_DIR$/movieInfoService/movieInfoService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ratingMovieService/ratingMovieService.iml" filepath="$PROJECT_DIR$/ratingMovieService/ratingMovieService.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<!--<form (ngSubmit)="updateSubmit()" >
+  <label>Enter name :</label>
+  <input [(ngModel)]="users.name" type="text" required name="name"/>
+  <br>
+  <label>Enter Email</label>
+  <input [(ngModel)]="users.email" type="email" required name="email"/>
+
+  <br>
+  <label>Enter Number</label>
+  <input [(ngModel)]="users.phoneNumber" type="number" required name="dob"/>
+  <br>
+  <br>
+  <label>Enter Date</label>
+  <input [(ngModel)]="users.dob" type="date" required name="dob"/>
+  <br>
+<button type="submit">Update</button>
+</form>
+
+<p>{{users|json}}</p>-->
+
+<div class="container">
+  <form (ngSubmit)="updateSubmit()">
+    <h2>UPDATE USER </h2>
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name :</label>
+      <input name="name" [(ngModel)]="users.name" type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address :</label>
+      <input name="email" [(ngModel)]="users.email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <!--<div class="mb-3">
+      <label for="password" class="form-label">Password :</label>
+      <input name="password" [(ngModel)]="info.password" type="password" class="form-control" id="password">
+    </div>-->
+    <div class="mb-3">
+      <label for="number" class="form-label">Phone Number :</label>
+      <input name="phone" [(ngModel)]="users.mobileNumber"   type="number" class="form-control" id="number">
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date of birth :</label>
+      <input name="dob" [(ngModel)]="users.dob"  type="date" class="form-control" id="date">
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+  </form>
+  <button routerLink="/dashboard/getUsers" type="submit" class="btn btn-outline-danger">Cancel</button>
+<br>
+  {{users | json}}
+</div>
+
